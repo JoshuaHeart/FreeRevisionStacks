@@ -22,125 +22,153 @@
 
     <main class="max-w-3xl mx-auto px-6 py-16">
         <h1 class="text-5xl font-extrabold mb-4 text-black">Kinematics</h1>
-        <p class="text-xl text-gray-500 mb-12">Comprehensive notes on motion analysis based on the IB Physics HL Syllabus.</p>
+        <p class="text-xl text-gray-500 mb-12">Foundational motion analysis for the IB Physics HL Syllabus.</p>
 
         <section class="mb-16">
             <h2 class="text-3xl font-bold mb-6">1. Basic Definitions</h2>
-            <div class="space-y-6">
-                <p><strong>Distance (\(d\)):</strong> Scalar. Total path length travelled. (Always \(\ge 0\)).</p>
-                <p><strong>Displacement (\(s\)):</strong> Vector. Straight-line change in position from start to end.</p>
-                <p><strong>Speed (\(v\)):</strong> Scalar. \(\text{dist} / \text{time}\).</p>
-                <p><strong>Velocity (\(v\)):</strong> Vector. \(\Delta s / \Delta t\).</p>
-                <p><strong>Acceleration (\(a\)):</strong> Vector. Rate of change of velocity (\(\Delta v / \Delta t\)).</p>
-            </div>
+            <p class="mb-6 text-gray-600 italic">These terms will be used in every physics unit, memorise them and understand them properly.</p>
+            
+            <ul class="space-y-6 list-none">
+                <li>
+                    <strong>Distance (\(d\)):</strong> a scalar quantity, is the total length of the path travelled by an object between two points. Measured in meters (m). Since distance is a scalar quantity, it can only be positive.
+                </li>
+                <li>
+                    <strong>Displacement (\(s\) or \(\Delta x\)):</strong> a vector quantity, is the change in position. It is a straight line from the initial position to the final position, (with direction). Measured in meters (m). Since displacement is a vector quantity, it can be negative or positive.
+                </li>
+            </ul>
+
             <div class="example-box mt-8">
                 <h4 class="font-bold text-green-800 mb-2">The 400m Runner Example</h4>
-                <p>Distance = 400m. Displacement = 0m (returned to start).</p>
+                <p>The distance a 400m runner runs is 400m, but since they finish at the same place they started, the displacement is 0m.</p>
             </div>
+
+            <ul class="space-y-6 mt-8 list-none">
+                <li>
+                    <strong>Speed (\(v\)):</strong> A scalar quantity, change in distance per unit time. Measured in meters per second (m/s).
+                    <p class="mt-2 font-mono text-blue-700">\(v = \text{total distance} / \text{total time}\) </p>
+                </li>
+                <li>
+                    <strong>Velocity (\(v\)):</strong> a vector quantity, the rate of change of displacement with respect to time, or simply the change in displacement per unit time. Essentially how quickly the displacement of an object changes. Measured in meters per second (m/s).
+                    <p class="mt-2 font-mono text-blue-700">\(v = ds/dt\) </p>
+                </li>
+                <li>
+                    <strong>Acceleration (\(a\)):</strong> A vector quantity, the rate at which velocity changes per unit time. Measured in meters per second squared (m/s²). An object accelerates any time its velocity changes (either direction or magnitude).
+                    <p class="mt-2 font-mono text-blue-700">\(a = dv/dt = d^2s/dt^2\) </p>
+                </li>
+            </ul>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-6">2. Motion Graphs</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6 text-black">2. Graphs</h2>
+            <div class="space-y-12">
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <p class="font-bold text-sm mb-4 text-center">Displacement-Time (\(s\)-\(t\))</p>
+                    <h3 class="font-bold mb-2">Displacement vs. Time</h3>
+                    <p class="text-sm mb-4">The gradient of the graph at any point ‘t₀’ is the velocity at said point ‘t₀’.</p>
                     <svg viewBox="0 0 200 120" class="w-full h-40">
                         <line x1="20" y1="100" x2="180" y2="100" stroke="black" stroke-width="2"/>
                         <line x1="20" y1="10" x2="20" y2="100" stroke="black" stroke-width="2"/>
                         <path d="M20,100 Q80,90 160,20" fill="none" stroke="#3b82f6" stroke-width="3"/>
-                        <text x="175" y="115" font-size="10">t</text>
-                        <text x="5" y="15" font-size="10">s</text>
+                        <text x="175" y="115" font-size="10">t (s)</text>
+                        <text x="5" y="15" font-size="10">s (m)</text>
                     </svg>
-                    <p class="text-xs text-center text-gray-400 mt-2">Gradient = Velocity</p>
                 </div>
+
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <p class="font-bold text-sm mb-4 text-center">Velocity-Time (\(v\)-\(t\))</p>
+                    <h3 class="font-bold mb-2">Velocity vs. Time</h3>
+                    <p class="text-sm mb-2">The gradient of the graph at any point ‘t₀’ is the acceleration at that point ‘t₀’.</p>
+                    <p class="text-sm mb-4 font-semibold text-blue-600">The area under this graph from ‘t₁’ to ‘t₂’ is equal to the displacement of the object from ‘t₁’ to ‘t₂’.</p>
                     <svg viewBox="0 0 200 120" class="w-full h-40">
                         <line x1="20" y1="100" x2="180" y2="100" stroke="black" stroke-width="2"/>
                         <line x1="20" y1="10" x2="20" y2="100" stroke="black" stroke-width="2"/>
                         <polygon points="20,100 150,30 150,100" fill="#10b981" fill-opacity="0.1"/>
                         <line x1="20" y1="100" x2="150" y2="30" stroke="#10b981" stroke-width="3"/>
-                        <text x="175" y="115" font-size="10">t</text>
-                        <text x="5" y="15" font-size="10">v</text>
+                        <text x="175" y="115" font-size="10">t (s)</text>
+                        <text x="5" y="15" font-size="10">v (m/s)</text>
                     </svg>
-                    <p class="text-xs text-center text-gray-400 mt-2">Gradient = Accel | Area = Disp</p>
                 </div>
             </div>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-6">3. SUVAT (Constant Accel.)</h2>
+            <h2 class="text-3xl font-bold mb-6">3. Kinematic (SUVAT) Equations</h2>
+            <p class="mb-6 text-gray-500 italic text-sm">Note: Derivations are outside of the scope of IB, and they are just here to aid understanding.</p>
+            
             <div class="space-y-4">
-                <details class="border rounded-xl p-4">
-                    <summary class="cursor-pointer font-bold text-xl">\(v = u + at\)</summary>
-                    <div class="mt-2 text-sm text-gray-600">From \(a = (v-u)/t\).</div>
+                <details class="border rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <summary class="cursor-pointer font-bold text-2xl flex justify-between">
+                        <span>\(v = u + at\)</span>
+                        <span class="text-blue-500 text-sm font-normal underline">Detailed Derivation</span>
+                    </summary>
+                    <div class="mt-4 text-gray-700">
+                        <p class="mb-2">This is derived directly from the definition of acceleration as the rate of change of velocity:</p>
+                        <p class="bg-gray-50 p-3 rounded">\[a = \frac{\Delta v}{t} = \frac{v - u}{t}\]</p>
+                        <p class="mt-2">By multiplying both sides by \(t\), we get \(at = v - u\). Adding \(u\) to both sides yields the final equation: \(\mathbf{v = u + at}\).</p>
+                    </div>
                 </details>
-                <details class="border rounded-xl p-4">
-                    <summary class="cursor-pointer font-bold text-xl">\(s = \frac{(u+v)t}{2}\)</summary>
-                    <div class="mt-2 text-sm text-gray-600">Average velocity \(\times\) time.</div>
+
+                <details class="border rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <summary class="cursor-pointer font-bold text-2xl flex justify-between">
+                        <span>\(s = ut + \frac{1}{2}at^2\)</span>
+                        <span class="text-blue-500 text-sm font-normal underline">Detailed Derivation</span>
+                    </summary>
+                    <div class="mt-4 text-gray-700">
+                        <p class="mb-2">This stems from finding the area under a Velocity-Time graph. The area of the trapezoid is:</p>
+                        <p class="bg-gray-50 p-3 rounded">\[s = \text{Area} = \frac{u+v}{2} \cdot t\]</p>
+                        <p class="mt-2">We substitute our first equation (\(v = u + at\)) for \(v\):</p>
+                        <p class="bg-gray-50 p-3 rounded">\[s = \frac{u + (u + at)}{2} \cdot t = \frac{2u + at}{2} \cdot t\]</p>
+                        <p class="mt-2 text-right font-bold">\[s = ut + \frac{1}{2}at^2\]</p>
+                    </div>
                 </details>
-                <details class="border rounded-xl p-4">
-                    <summary class="cursor-pointer font-bold text-xl">\(s = ut + \frac{1}{2}at^2\)</summary>
-                    <div class="mt-2 text-sm text-gray-600">Combines the two above.</div>
-                </details>
-                <details class="border rounded-xl p-4">
-                    <summary class="cursor-pointer font-bold text-xl">\(v^2 = u^2 + 2as\)</summary>
-                    <div class="mt-2 text-sm text-gray-600">Eliminates 't' from the set.</div>
+
+                <details class="border rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <summary class="cursor-pointer font-bold text-2xl flex justify-between">
+                        <span>\(v^2 = u^2 + 2as\)</span>
+                        <span class="text-blue-500 text-sm font-normal underline">Detailed Derivation</span>
+                    </summary>
+                    <div class="mt-4 text-gray-700">
+                        <p class="mb-2">We derive this by eliminating the time variable (\(t\)). Rearrange the first equation to solve for \(t\):</p>
+                        <p class="bg-gray-50 p-3 rounded">\[t = \frac{v-u}{a}\]</p>
+                        <p class="mt-2">Substitute this into the displacement equation \(s = \frac{u+v}{2}t\):</p>
+                        <p class="bg-gray-50 p-3 rounded">\[s = \left(\frac{v+u}{2}\right)\left(\frac{v-u}{a}\right) = \frac{v^2 - u^2}{2a}\]</p>
+                        <p class="mt-2 text-right font-bold">\[2as = v^2 - u^2 \implies v^2 = u^2 + 2as\]</p>
+                    </div>
                 </details>
             </div>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-6">4. Vector Decomposition</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <h2 class="text-3xl font-bold mb-6">5. Terminal Velocity (Skydiver Analysis)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div class="bg-gray-50 p-6 rounded-xl border">
+                    <h3 class="font-bold text-center mb-4">The Skydiver Graph</h3>
                     <svg viewBox="0 0 200 150" class="w-full">
-                        <line x1="30" y1="120" x2="160" y2="120" stroke="#94a3b8" stroke-dasharray="4"/>
-                        <line x1="160" y1="120" x2="160" y2="30" stroke="#94a3b8" stroke-dasharray="4"/>
-                        <line x1="30" y1="120" x2="160" y2="30" stroke="#ef4444" stroke-width="4"/>
-                        <path d="M60,120 A30,30 0 0 0 54,103" fill="none" stroke="black"/>
-                        <text x="65" y="115" font-size="12">\(\theta\)</text>
-                        <text x="80" y="70" font-size="14" fill="#ef4444" font-weight="bold">v</text>
-                        <text x="80" y="135" font-size="12" font-weight="bold">\(v_x = v \cos \theta\)</text>
-                        <text x="165" y="75" font-size="12" font-weight="bold" writing-mode="vertical-rl">\(v_y = v \sin \theta\)</text>
+                        <line x1="20" y1="130" x2="180" y2="130" stroke="black" stroke-width="2"/>
+                        <line x1="20" y1="10" x2="20" y2="130" stroke="black" stroke-width="2"/>
+                        <path d="M20,130 Q100,20 180,20" fill="none" stroke="#ef4444" stroke-width="3"/>
+                        <line x1="100" y1="20" x2="180" y2="20" stroke="gray" stroke-dasharray="4"/>
+                        <text x="180" y="145" font-size="10">Time (s)</text>
+                        <text x="5" y="15" font-size="10">v (m/s)</text>
+                        <text x="120" y="35" font-size="8" fill="gray">Terminal Speed</text>
                     </svg>
                 </div>
-                <div>
-                    <h3 class="font-bold mb-4">How it works:</h3>
-                    <p class="text-sm text-gray-600 mb-4">In physics, we use SOH-CAH-TOA to split any diagonal vector into its horizontal and vertical components.</p>
-                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-700">
-                        <li><strong>Adjacent (\(x\)):</strong> Uses \(\cos \theta\) because it's "next to" the angle.</li>
-                        <li><strong>Opposite (\(y\)):</strong> Uses \(\sin \theta\) because it's "across" from the angle.</li>
+                <div class="text-sm text-gray-700 flex flex-col justify-center">
+                    <h4 class="font-bold mb-2">Graph Breakdown:</h4>
+                    <ul class="space-y-4">
+                        <li><strong>\(t=0\):</strong> Gradient is steepest (\(g = 9.81 \, m/s^2\)) because Drag is zero.</li>
+                        <li><strong>Middle Curve:</strong> The gradient decreases. As velocity increases, Air Resistance increases, reducing the net force (\(W-D\)) and thus reducing acceleration.</li>
+                        <li><strong>Plateau:</strong> The gradient becomes zero. Drag equals Weight (\(D=W\)). Net force is zero.</li>
                     </ul>
                 </div>
             </div>
-        </section>
 
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 text-black">5. Terminal Velocity (Skydiver)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center">
-                    <p class="font-bold mb-4">Forces on a Skydiver</p>
-                    <svg viewBox="0 0 100 150" class="w-24">
-                        <circle cx="50" cy="50" r="10" fill="black"/>
-                        <line x1="50" y1="60" x2="50" y2="100" stroke="black" stroke-width="2"/>
-                        <line x1="50" y1="100" x2="50" y2="140" stroke="#10b981" stroke-width="4"/>
-                        <polygon points="45,135 50,145 55,135" fill="#10b981"/>
-                        <text x="58" y="135" font-size="10" fill="#10b981">W (Weight)</text>
-                        <line x1="50" y1="40" x2="50" y2="5" stroke="#ef4444" stroke-width="4"/>
-                        <polygon points="45,10 50,0 55,10" fill="#ef4444"/>
-                        <text x="58" y="15" font-size="10" fill="#ef4444">D (Drag)</text>
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="font-bold mb-2">The Process:</h3>
-                    <ol class="list-decimal list-inside text-sm space-y-3 text-gray-700">
-                        <li><strong>Initial Fall:</strong> Velocity is low, so Drag is low. Acceleration \(\approx g\).</li>
-                        <li><strong>Acceleration:</strong> As velocity increases, Drag (\(D\)) increases.</li>
-                        <li><strong>Net Force Decreases:</strong> \(F_{\text{net}} = W - D\). As \(D\) grows, \(F_{\text{net}}\) shrinks.</li>
-                        <li><strong>Terminal Velocity:</strong> Eventually, \(D = W\). \(F_{\text{net}} = 0\), so \(a = 0\). The skydiver falls at a constant speed.</li>
-                    </ol>
-                </div>
+            <div class="tip-box bg-blue-900 text-white border-none p-8 rounded-2xl">
+                <h3 class="font-bold text-xl mb-4">The Parachute Effect</h3>
+                <p class="mb-4">When the parachute opens, Surface Area increases dramatically. Drag becomes much larger than Weight.</p>
+                <ul class="list-disc list-inside space-y-2 opacity-90">
+                    <li>The skydiver decelerates rapidly (velocity drops).</li>
+                    <li>As velocity drops, Drag decreases.</li>
+                    <li>Eventually, Drag equals Weight again at a **lower terminal velocity**, allowing for a safe landing.</li>
+                </ul>
             </div>
         </section>
 
