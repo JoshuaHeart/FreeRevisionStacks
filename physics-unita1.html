@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.1 Kinematics | FreeRevisionStacks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tip-box { border-left: 4px solid #3b82f6; background-color: #eff6ff; padding: 1.5rem; border-radius: 0.5rem; }
+        .example-box { border-left: 4px solid #10b981; background-color: #ecfdf5; padding: 1.5rem; border-radius: 0.5rem; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 leading-relaxed">
+
+    <nav class="p-6 border-b border-gray-100 flex justify-between items-center max-w-5xl mx-auto">
+        <a href="physics-unita.html" class="text-sm font-medium text-gray-500 hover:text-black">← Back to Unit A Hub</a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <h1 class="text-5xl font-extrabold mb-4">A.1 Kinematics</h1>
+        <p class="text-xl text-gray-500 mb-12">The study of motion without considering its causes. Essential foundations for IB Physics HL.</p>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">1. Distance vs. Displacement</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Distance (Scalar)</h3>
+                    <p class="text-gray-600">The total length of the path traveled. Direction does not matter.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Displacement (Vector)</h3>
+                    <p class="text-gray-600">The straight-line change in position from start to end. Direction is critical.</p>
+                </div>
+            </div>
+
+            <div class="example-box mb-6">
+                <h4 class="font-bold text-green-800 mb-2">Key Example: The Circular Track</h4>
+                <p>If an athlete runs one full lap of a 400m circular track:</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li><strong>Distance</strong> = 400m</li>
+                    <li><strong>Displacement</strong> = 0m (since they returned to the start)</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h4 class="font-bold text-blue-800 mb-2">Pro Tip</h4>
+                <p>Always specify direction for displacement (e.g., "+15m" or "15m North"). In IB exams, forgetting the sign or direction is a common way to lose an easy mark.</p>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">2. Analyzing Motion Graphs</h2>
+            <p class="mb-8 text-gray-600">Visualizing how position and velocity change over time is the most tested skill in Paper 1.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                    <p class="text-center font-bold text-sm mb-4">Displacement-Time (Constant Velocity)</p>
+                    <svg viewBox="0 0 200 150" class="w-full">
+                        <line x1="20" y1="130" x2="180" y2="130" stroke="black" stroke-width="2"/>
+                        <line x1="20" y1="20" x2="20" y2="130" stroke="black" stroke-width="2"/>
+                        <line x1="20" y1="130" x2="160" y2="40" stroke="#3b82f6" stroke-width="3"/>
+                        <text x="180" y="145" font-size="12">t</text>
+                        <text x="5" y="25" font-size="12">s</text>
+                    </svg>
+                    <p class="text-xs text-gray-400 mt-2 text-center">Gradient = Velocity</p>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                    <p class="text-center font-bold text-sm mb-4">Velocity-Time (Constant Accel.)</p>
+                    <svg viewBox="0 0 200 150" class="w-full">
+                        <line x1="20" y1="130" x2="180" y2="130" stroke="black" stroke-width="2"/>
+                        <line x1="20" y1="20" x2="20" y2="130" stroke="black" stroke-width="2"/>
+                        <line x1="20" y1="130" x2="160" y2="40" stroke="#10b981" stroke-width="3"/>
+                        <polygon points="20,130 160,40 160,130" fill="#10b981" fill-opacity="0.1"/>
+                        <text x="180" y="145" font-size="12">t</text>
+                        <text x="5" y="25" font-size="12">v</text>
+                    </svg>
+                    <p class="text-xs text-gray-400 mt-2 text-center">Area = Displacement | Gradient = Acceleration</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">3. SUVAT: Constant Acceleration</h2>
+            <p class="mb-6">These five equations describe any object moving with <strong>uniform acceleration</strong> in a straight line.</p>
+            
+            <div class="bg-gray-900 text-white p-8 rounded-2xl mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl">
+                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$v = u + at$$</div>
+                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$s = ut + \frac{1}{2}at^2$$</div>
+                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$v^2 = u^2 + 2as$$</div>
+                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$s = \frac{(u+v)t}{2}$$</div>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4 class="font-bold text-blue-800 mb-2">Step-by-Step Strategy</h4>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li><strong>Identify the 'S-U-V-A-T':</strong> List what you know and what you need.</li>
+                    <li><strong>Check units:</strong> Ensure everything is in SI (m, s, m/s).</li>
+                    <li><strong>Choose the "Missing Variable" equation:</strong> If you don't have <em>time</em>, use \(v^2 = u^2 + 2as\).</li>
+                    <li><strong>Signs:</strong> If a ball is thrown up, \(u\) is positive, but acceleration (\(g\)) is \(-9.81 \, m/s^2\).</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="mt-20 pt-8 border-t border-gray-100">
+            <h2 class="text-2xl font-bold mb-6">Further Learning</h2>
+            <a href="https://www.youtube.com/watch?v=hf60vCsqmP8" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all border border-gray-200">
+                <div class="bg-red-600 text-white p-3 rounded-lg mr-4">▶</div>
+                <div>
+                    <p class="font-bold text-gray-900">IB Physics: Distance & Displacement (Topic A.1)</p>
+                    <p class="text-sm text-gray-500">A clear visual recap of the fundamental definitions.</p>
+                </div>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="py-12 text-center text-gray-400 border-t border-gray-100">
+        <p>&copy; 2026 FreeRevisionStacks</p>
+    </footer>
+
+</body>
+</html>
