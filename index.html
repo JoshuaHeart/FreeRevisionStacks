@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeRevisionStacks | IB STEM Guides</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .card:hover { border-color: #000; transform: translateY(-2px); transition: all 0.2s; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <nav class="border-b border-gray-100 py-6 px-8 flex justify-between items-center">
+        <h1 class="text-xl font-bold tracking-tight">FreeRevisionStacks</h1>
+        <div class="space-x-6 text-sm font-medium text-gray-500">
+            <a href="#" class="hover:text-black">About</a>
+            <a href="#" class="hover:text-black">Resources</a>
+            <a href="https://github.com" class="hover:text-black">GitHub</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-5xl mx-auto px-8 py-20">
+        <header class="mb-16">
+            <h2 class="text-5xl font-extrabold mb-4">Elite IB Revision.</h2>
+            <p class="text-xl text-gray-500 max-w-2xl">
+                In-depth explanations, original "PFL" challenge problems, and calculus-based derivations for IB Physics, Math AA, and Chemistry.
+            </p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="card border border-gray-200 p-8 rounded-xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Active</span>
+                <h3 class="text-2xl font-bold mt-2">Physics HL</h3>
+                <p class="text-gray-500 mt-4 mb-6">Mastering Kinematics, Fields, and Quantum Mechanics through the lens of sports engineering.</p>
+                <button onclick="alert('Starting with Topic A: Kinematics - Content Coming Soon!')" class="w-full py-3 bg-black text-white rounded-lg font-medium">View Topics</button>
+            </div>
+
+            <div class="card border border-gray-200 p-8 rounded-xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Coming Soon</span>
+                <h3 class="text-2xl font-bold mt-2">Math AA HL</h3>
+                <p class="text-gray-500 mt-4 mb-6">From Proof by Induction to Multivariable Calculus applications in physical systems.</p>
+                <div class="w-full py-3 bg-gray-100 text-gray-400 text-center rounded-lg font-medium cursor-not-allowed">Locked</div>
+            </div>
+
+            <div class="card border border-gray-200 p-8 rounded-xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Coming Soon</span>
+                <h3 class="text-2xl font-bold mt-2">Chemistry HL</h3>
+                <p class="text-gray-500 mt-4 mb-6">In-depth guides for Thermodynamics, Kinetics, and Organic Chemistry mechanisms.</p>
+                <div class="w-full py-3 bg-gray-100 text-gray-400 text-center rounded-lg font-medium cursor-not-allowed">Locked</div>
+            </div>
+
+        </section>
+
+        <section class="mt-24 border-t border-gray-100 pt-12">
+            <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-8">Draft Preview: Kinematics Derivation</h4>
+            <div class="bg-gray-50 p-8 rounded-2xl">
+                <p class="mb-4 italic text-gray-600">Sample derivation from Topic A.1:</p>
+                <p class="text-lg">
+                    The displacement \( s \) can be found by integrating the velocity function \( v(t) = u + at \):
+                    $$s = \int_{0}^{t} (u + at) \, dt = \left[ ut + \frac{1}{2}at^2 \right]_{0}^{t} = ut + \frac{1}{2}at^2$$
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-100 py-12 px-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2026 FreeRevisionStacks. Built for the IB Community.</p>
+    </footer>
+
+</body>
+</html>
