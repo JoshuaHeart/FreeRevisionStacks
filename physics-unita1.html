@@ -7,112 +7,146 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
         .tip-box { border-left: 4px solid #3b82f6; background-color: #eff6ff; padding: 1.5rem; border-radius: 0.5rem; }
         .example-box { border-left: 4px solid #10b981; background-color: #ecfdf5; padding: 1.5rem; border-radius: 0.5rem; }
+        details summary::-webkit-details-marker { display:none; }
     </style>
 </head>
-<body class="bg-white text-gray-900 leading-relaxed">
+<body class="text-gray-900 leading-relaxed">
 
     <nav class="p-6 border-b border-gray-100 flex justify-between items-center max-w-5xl mx-auto">
         <a href="physics-unita.html" class="text-sm font-medium text-gray-500 hover:text-black">← Back to Unit A Hub</a>
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Topic A.1</span>
     </nav>
 
     <main class="max-w-3xl mx-auto px-6 py-16">
-        <h1 class="text-5xl font-extrabold mb-4">A.1 Kinematics</h1>
-        <p class="text-xl text-gray-500 mb-12">The study of motion without considering its causes. Essential foundations for IB Physics HL.</p>
+        <h1 class="text-5xl font-extrabold mb-4 text-black">Kinematics</h1>
+        <p class="text-xl text-gray-500 mb-12">Foundational motion analysis for the IB Physics HL Syllabus (2025/2026).</p>
 
         <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-6">1. Distance vs. Displacement</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Distance (Scalar)</h3>
-                    <p class="text-gray-600">The total length of the path traveled. Direction does not matter.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Displacement (Vector)</h3>
-                    <p class="text-gray-600">The straight-line change in position from start to end. Direction is critical.</p>
-                </div>
+            <h2 class="text-3xl font-bold mb-6">1. Core Definitions</h2>
+            <div class="space-y-6">
+                <p><strong>Distance ($d$):</strong> Scalar. Total path length traveled.</p>
+                <p><strong>Displacement ($s$):</strong> Vector. Straight-line change in position from start to end point.</p>
+                <p><strong>Speed ($v$):</strong> Scalar. Rate of change of distance.</p>
+                <p><strong>Velocity ($v$):</strong> Vector. Rate of change of displacement.</p>
             </div>
 
-            <div class="example-box mb-6">
+            <div class="example-box mt-8">
                 <h4 class="font-bold text-green-800 mb-2">Key Example: The Circular Track</h4>
-                <p>If an athlete runs one full lap of a 400m circular track:</p>
-                <ul class="list-disc list-inside mt-2 space-y-1">
-                    <li><strong>Distance</strong> = 400m</li>
-                    <li><strong>Displacement</strong> = 0m (since they returned to the start)</li>
-                </ul>
-            </div>
-
-            <div class="tip-box">
-                <h4 class="font-bold text-blue-800 mb-2">Pro Tip</h4>
-                <p>Always specify direction for displacement (e.g., "+15m" or "15m North"). In IB exams, forgetting the sign or direction is a common way to lose an easy mark.</p>
+                <p>If an athlete runs exactly one lap of a 400m track: Distance = 400m, but Displacement = 0m.</p>
             </div>
         </section>
 
         <section class="mb-16">
             <h2 class="text-3xl font-bold mb-6">2. Analyzing Motion Graphs</h2>
-            <p class="mb-8 text-gray-600">Visualizing how position and velocity change over time is the most tested skill in Paper 1.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
-                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                    <p class="text-center font-bold text-sm mb-4">Displacement-Time (Constant Velocity)</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <p class="font-bold text-sm mb-4">Displacement-Time Graph</p>
                     <svg viewBox="0 0 200 150" class="w-full">
                         <line x1="20" y1="130" x2="180" y2="130" stroke="black" stroke-width="2"/>
                         <line x1="20" y1="20" x2="20" y2="130" stroke="black" stroke-width="2"/>
-                        <line x1="20" y1="130" x2="160" y2="40" stroke="#3b82f6" stroke-width="3"/>
+                        <path d="M20,130 Q100,100 160,20" fill="none" stroke="#3b82f6" stroke-width="3"/>
                         <text x="180" y="145" font-size="12">t</text>
                         <text x="5" y="25" font-size="12">s</text>
                     </svg>
-                    <p class="text-xs text-gray-400 mt-2 text-center">Gradient = Velocity</p>
+                    <p class="text-xs text-gray-400 mt-4">Gradient = Velocity. A curve indicates acceleration.</p>
                 </div>
-
-                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                    <p class="text-center font-bold text-sm mb-4">Velocity-Time (Constant Accel.)</p>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <p class="font-bold text-sm mb-4">Velocity-Time Graph</p>
                     <svg viewBox="0 0 200 150" class="w-full">
                         <line x1="20" y1="130" x2="180" y2="130" stroke="black" stroke-width="2"/>
                         <line x1="20" y1="20" x2="20" y2="130" stroke="black" stroke-width="2"/>
                         <line x1="20" y1="130" x2="160" y2="40" stroke="#10b981" stroke-width="3"/>
                         <polygon points="20,130 160,40 160,130" fill="#10b981" fill-opacity="0.1"/>
-                        <text x="180" y="145" font-size="12">t</text>
-                        <text x="5" y="25" font-size="12">v</text>
                     </svg>
-                    <p class="text-xs text-gray-400 mt-2 text-center">Area = Displacement | Gradient = Acceleration</p>
+                    <p class="text-xs text-gray-400 mt-4">Gradient = Acceleration. Area = Displacement.</p>
                 </div>
             </div>
         </section>
 
         <section class="mb-16">
             <h2 class="text-3xl font-bold mb-6">3. SUVAT: Constant Acceleration</h2>
-            <p class="mb-6">These five equations describe any object moving with <strong>uniform acceleration</strong> in a straight line.</p>
+            <p class="mb-6 text-gray-600 italic">Click an equation to reveal its derivation.</p>
             
-            <div class="bg-gray-900 text-white p-8 rounded-2xl mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl">
-                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$v = u + at$$</div>
-                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$s = ut + \frac{1}{2}at^2$$</div>
-                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$v^2 = u^2 + 2as$$</div>
-                    <div class="p-4 border border-gray-700 rounded-lg text-center">$$s = \frac{(u+v)t}{2}$$</div>
-                </div>
+            <div class="space-y-4 mb-8">
+                <details class="group border border-gray-200 rounded-xl px-6 py-4 hover:border-black transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-2xl">
+                        <span>\(v = u + at\)</span>
+                        <span class="text-sm font-normal text-blue-600">View Derivation</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 border-t pt-4">
+                        <p>From the definition of acceleration: \(a = \frac{\Delta v}{t} = \frac{v - u}{t}\)</p>
+                        <p>Rearranging: \(at = v - u \implies \mathbf{v = u + at}\)</p>
+                    </div>
+                </details>
+
+                <details class="group border border-gray-200 rounded-xl px-6 py-4 hover:border-black transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-2xl">
+                        <span>\(s = ut + \frac{1}{2}at^2\)</span>
+                        <span class="text-sm font-normal text-blue-600">View Derivation</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 border-t pt-4">
+                        <p>Distance is the area under a v-t graph: \(s = \frac{u+v}{2} \cdot t\)</p>
+                        <p>Substitute \(v = u + at\): \(s = \frac{u + (u + at)}{2} \cdot t\)</p>
+                        <p>\(s = \frac{2u + at}{2} \cdot t \implies \mathbf{s = ut + \frac{1}{2}at^2}\)</p>
+                    </div>
+                </details>
+
+                <details class="group border border-gray-200 rounded-xl px-6 py-4 hover:border-black transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-bold text-2xl">
+                        <span>\(v^2 = u^2 + 2as\)</span>
+                        <span class="text-sm font-normal text-blue-600">View Derivation</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 border-t pt-4">
+                        <p>Eliminate \(t\) by substituting \(t = \frac{v-u}{a}\) into \(s = \frac{u+v}{2} \cdot t\).</p>
+                        <p>\(s = \frac{(v+u)(v-u)}{2a} = \frac{v^2 - u^2}{2a}\)</p>
+                        <p>Rearranging gives: \(\mathbf{v^2 = u^2 + 2as}\)</p>
+                    </div>
+                </details>
             </div>
 
             <div class="tip-box">
-                <h4 class="font-bold text-blue-800 mb-2">Step-by-Step Strategy</h4>
-                <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                    <li><strong>Identify the 'S-U-V-A-T':</strong> List what you know and what you need.</li>
-                    <li><strong>Check units:</strong> Ensure everything is in SI (m, s, m/s).</li>
-                    <li><strong>Choose the "Missing Variable" equation:</strong> If you don't have <em>time</em>, use \(v^2 = u^2 + 2as\).</li>
-                    <li><strong>Signs:</strong> If a ball is thrown up, \(u\) is positive, but acceleration (\(g\)) is \(-9.81 \, m/s^2\).</li>
-                </ol>
+                <h4 class="font-bold text-blue-800 mb-2">SUVAT Tips</h4>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Always define your positive direction (usually Up or Right).</li>
+                    <li>If an object is "dropped", \(u = 0\).</li>
+                    <li>At maximum height, \(v = 0\).</li>
+                </ul>
             </div>
         </section>
 
-        <section class="mt-20 pt-8 border-t border-gray-100">
-            <h2 class="text-2xl font-bold mb-6">Further Learning</h2>
-            <a href="https://www.youtube.com/watch?v=hf60vCsqmP8" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all border border-gray-200">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">4. Projectile Motion</h2>
+            <p class="mb-6 text-gray-600">Treat vertical and horizontal motion as completely independent.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-6 border rounded-xl">
+                    <h3 class="font-bold mb-2">Horizontal (\(x\))</h3>
+                    <p class="text-sm">\(a = 0\) (Constant velocity)</p>
+                    <p class="text-sm">\(u_x = u \cos\theta\)</p>
+                </div>
+                <div class="p-6 border rounded-xl">
+                    <h3 class="font-bold mb-2">Vertical (\(y\))</h3>
+                    <p class="text-sm">\(a = -9.81 \, m/s^2\)</p>
+                    <p class="text-sm">\(u_y = u \sin\theta\)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">5. Fluid Resistance & Terminal Velocity</h2>
+            <p class="mb-4">As an object's speed increases, the resistive force (drag) also increases. Terminal velocity occurs when Drag = Weight.</p>
+            
+        </section>
+
+        <section class="mt-24 pt-8 border-t border-gray-100">
+            <h2 class="text-2xl font-bold mb-6">Recommended Resource</h2>
+            <a href="https://www.youtube.com/watch?v=hf60vCsqmP8" target="_blank" class="flex items-center p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-all border border-gray-200">
                 <div class="bg-red-600 text-white p-3 rounded-lg mr-4">▶</div>
                 <div>
-                    <p class="font-bold text-gray-900">IB Physics: Distance & Displacement (Topic A.1)</p>
-                    <p class="text-sm text-gray-500">A clear visual recap of the fundamental definitions.</p>
+                    <p class="font-bold text-gray-900">Kinematics Review - Paper 1 Style</p>
+                    <p class="text-sm text-gray-500">Perfect for visualizing definitions and graph analysis.</p>
                 </div>
             </a>
         </section>
